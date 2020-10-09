@@ -7,7 +7,7 @@ double variance(int data[], int m);    //분산
 
 int main() {
 	int data[10];
-	double m, v, d;                     //평균, 분산, 표준편차
+	double m, v, d;                //평균, 분산, 표준편차
 	for (int i = 0; i < 10; i++) {
 		printf("데이터를 입력하시오: ");
 		scanf_s("%d", &data[i]);
