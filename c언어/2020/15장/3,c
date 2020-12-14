@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+
+int main() {
+	FILE* fp;
+	char file[100];
+	FILE* fp1;
+	char file1[100];
+	int count;
+	char buffer[100];
+
+	printf("원본 파일 이름: ");
+	gets_s(file, 100);
+	printf("복사 파일 이름: ");
+	gets_s(file1, 100);
+
+	if ((fp = fopen(file, "rb")) == NULL) {
+		printf("안열림1\n");
+		exit(1);
+	}
+	if ((fp1 = fopen(file1, "wb")) == NULL) {
+		printf("안열림1\n");
+		exit(1);
+	}
+
+	while ((count = fread(buffer, sizeof(char), 100, fp)) != 0) {
+		fwrite(buffer, sizeof(char), count, fp1);
+	}
+	
+	
+	fclose(fp);
+	return 0;
+}
