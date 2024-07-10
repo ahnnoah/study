@@ -80,9 +80,11 @@ Request Headers {
 #### Toss Payment
 
 결제주체-PICKS, 결제방식-PG인 경우, TossPayment를 이용하여 결제를 진행하고 있습니다.
+
 이는 추후 변경될 수 있다는 점 참고부탁드립니다.
 
 TossPayment의 clientKey, secretKey 정보는 .env 파일에 존재하며,
+
 해당 key값들은 test, live가 구분되어 있으니 배포 전 key값을 확인 후 진행해주세요.
 
 #### picks-auth-scope
